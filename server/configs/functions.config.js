@@ -4,18 +4,18 @@ const lowerMin = 'a'.charCodeAt(0)
 const lowerMax = 'z'.charCodeAt(0)
 
 module.exports = {
-  caesar: (plaintext, factor) => {
+  caesar: (text, factor) => {
     let cipher = ''
-    for (let i = 0; i < plaintext.length; i++) {
-      plaintext.charCodeAt(i) >= 65 && plaintext.charCodeAt(i) <= 90
+    for (let i = 0; i < text.length; i++) {
+      text.charCodeAt(i) >= 65 && text.charCodeAt(i) <= 90
         ? (cipher += String.fromCharCode(
-            ((plaintext.charCodeAt(i) - min + factor) % (max - min + 1)) + min
+            ((text.charCodeAt(i) - min + factor) % (max - min + 1)) + min
           ))
-        : plaintext.charCodeAt(i) >= 97 && plaintext.charCodeAt(i) <= 122
+        : text.charCodeAt(i) >= 97 && text.charCodeAt(i) <= 122
         ? (cipher += String.fromCharCode(
-            ((plaintext.charCodeAt(i) - lowerMin + factor) % (lowerMax - lowerMin + 1)) + lowerMin
+            ((text.charCodeAt(i) - lowerMin + factor) % (lowerMax - lowerMin + 1)) + lowerMin
           ))
-        : (cipher += plaintext[i])
+        : (cipher += text[i])
     }
     return cipher
   },

@@ -2,16 +2,16 @@ const express = require('express')
 const router = express.Router()
 const { caesar } = require('./../configs/functions.config')
 
-router.post('/plaintext-to-caesar', (req, res, next) => {
-  const plaintext = req.body.text
+router.post('/caesar', (req, res, next) => {
+  const text = req.body.text
   const factor = parseInt(req.body.factor)
 
-  if (/^[a-zA-Z\s]*$/.test(plaintext) === false) {
+  if (/^[a-zA-Z\s]*$/.test(text) === false) {
     res.json({
       error: 'Your text contains forbidden characters! Please use only letters from A to Z',
     })
   } else {
-    res.json({ message: caesar(plaintext, factor) })
+    res.json({ message: caesar(text, factor) })
   }
 })
 
