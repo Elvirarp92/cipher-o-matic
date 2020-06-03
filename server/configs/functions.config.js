@@ -21,8 +21,6 @@ function charCaesarDecrypt(char, factor, min) {
     : String.fromCharCode(decryptedCharCode)
 }
 
-//There is a ton of repetition here. There should be a way to make this code DRYer.
-
 module.exports = {
   caesar: (text, factor, direction) => {
     let cipher = ''
