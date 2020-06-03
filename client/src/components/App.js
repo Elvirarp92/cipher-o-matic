@@ -4,6 +4,8 @@ import InputForm from './InputForm/InputForm'
 
 import Alert from 'react-bootstrap/Alert'
 
+import './App.css'
+
 class App extends Component {
   constructor() {
     super()
@@ -15,7 +17,6 @@ class App extends Component {
 
   renderCypherText = (output) => {
     const stateCopy = { ...this.State }
-    console.log(output)
     stateCopy.message = output.message
     stateCopy.error = output.error
 
@@ -27,7 +28,11 @@ class App extends Component {
       <main>
         <h1>Cipher-O-Matic</h1>
         <p>Encrypt and decrypt text with classic algorithms!</p>
-        {this.state.error && <Alert variant='warning'>{this.state.error}</Alert>}
+        {this.state.error && (
+          <Alert variant='warning' className='alert'>
+            {this.state.error}
+          </Alert>
+        )}
         <InputForm renderCypherText={this.renderCypherText} />
         <p className='output'>{this.state.message}</p>
       </main>
