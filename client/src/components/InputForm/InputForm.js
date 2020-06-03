@@ -51,6 +51,8 @@ class InputForm extends Component {
             as='input'
             type='number'
             name='factor'
+            min="0"
+            max="25"
             value={this.state.value}
             onChange={this.handleChange}
           />
