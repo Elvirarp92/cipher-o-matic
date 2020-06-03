@@ -1,7 +1,7 @@
 const min = 'A'.charCodeAt(0)
-const max = 'Z'.charCodeAt(0)
+// const max = 'Z'.charCodeAt(0)
 const lowerMin = 'a'.charCodeAt(0)
-const lowerMax = 'z'.charCodeAt(0)
+// const lowerMax = 'z'.charCodeAt(0)
 
 function charCaesarEncrypt(char, factor, min) {
   const letterPos = char.charCodeAt(0) % min
