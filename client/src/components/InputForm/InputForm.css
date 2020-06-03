@@ -1,0 +1,10 @@
+section {
+  max-width: 450px;
+  margin: 24px auto;
+}
+
+.options-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
