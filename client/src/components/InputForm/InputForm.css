@@ -2,8 +2,25 @@ section {
   margin: 24px auto;
 }
 
+input,
+textarea {
+  margin: 8px 0px;
+}
+
 .options-container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
+}
+
+.cipher {
+  max-width: 150px;
+}
+
+.factor {
+  max-width: 100px;
+}
+
+.direction {
+  text-align: center;
 }

@@ -46,12 +46,8 @@ class InputForm extends Component {
           apostrophes, exclamation or interrogation signs.
         </Form.Text>
         <div className='options-container'>
-          <Form.Control as='select' name='cipher' onChange={this.handleChange}>
+          <Form.Control as='select' name='cipher' onChange={this.handleChange} className='cipher'>
             <option value='caesar'>Caesar cipher</option>
-          </Form.Control>
-          <Form.Control as='select' name='direction' onChange={this.handleChange}>
-            <option value='encryption'>Plaintext -> Ciphertext</option>
-            <option value='decryption'>Ciphertext -> Plaintext</option>
           </Form.Control>
           <Form.Control
             as='input'
@@ -61,7 +57,18 @@ class InputForm extends Component {
             max='25'
             value={this.state.value}
             onChange={this.handleChange}
+            className='factor'
           />
+        </div>
+        <div className='options-container'>
+          <Form.Control
+            as='select'
+            name='direction'
+            onChange={this.handleChange}
+            className='direction'>
+            <option value='encryption'>Plaintext -> Ciphertext</option>
+            <option value='decryption'>Ciphertext -> Plaintext</option>
+          </Form.Control>
         </div>
       </Form.Group>
     )
