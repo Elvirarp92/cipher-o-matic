@@ -42,7 +42,7 @@ class InputForm extends Component {
         <Form.Control as='textarea' name='text' onChange={this.handleChange} />
         <Form.Text className='text-muted'>
           Please only input Latin characters (without diacritics), spaces, periods, commas,
-          exclamation or interrogation signs.
+          apostrophes, exclamation or interrogation signs.
         </Form.Text>
         <div className='options-container'>
           <Form.Control as='select' name='cipher' onChange={this.handleChange}>
