@@ -1,6 +1,6 @@
 # Cipher-O-Matic
 
-Cipher-O-Matic is a single page web application to encrypt text using classic cyphers. It uses a RESTful API to make the encryption calculations, and makes use of Jest for unit testing. Work in progress - see Roadmap to have a gander at the planned features!
+Cipher-O-Matic is a single page, MERN based, web application to encrypt text using classic cyphers. It uses a RESTful API to make the encryption calculations, and makes use of Jest for unit testing. Work in progress - see Roadmap to have a gander at the planned features!
 
 ![](https://i.imgur.com/LTREuXH.gif)
 
