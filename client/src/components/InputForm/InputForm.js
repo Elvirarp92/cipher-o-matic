@@ -41,7 +41,8 @@ class InputForm extends Component {
       <Form.Group as='section'>
         <Form.Control as='textarea' name='text' onChange={this.handleChange} />
         <Form.Text className='text-muted'>
-          Please only input Latin characters without diacritics or spaces.
+          Please only input Latin characters (without diacritics), spaces, periods, commas,
+          exclamation or interrogation signs.
         </Form.Text>
         <div className='options-container'>
           <Form.Control as='select' name='cipher' onChange={this.handleChange}>
@@ -51,8 +52,8 @@ class InputForm extends Component {
             as='input'
             type='number'
             name='factor'
-            min="0"
-            max="25"
+            min='0'
+            max='25'
             value={this.state.value}
             onChange={this.handleChange}
           />
