@@ -12,6 +12,7 @@ class InputForm extends Component {
       text: '',
       cipher: 'caesar',
       factor: 0,
+      direction: 'encryption',
     }
 
     this.cipherService = new CipherService()
@@ -47,6 +48,10 @@ class InputForm extends Component {
         <div className='options-container'>
           <Form.Control as='select' name='cipher' onChange={this.handleChange}>
             <option value='caesar'>Caesar cipher</option>
+          </Form.Control>
+          <Form.Control as='select' name='direction' onChange={this.handleChange}>
+            <option value='encryption'>Plaintext -> Ciphertext</option>
+            <option value='decryption'>Ciphertext -> Plaintext</option>
           </Form.Control>
           <Form.Control
             as='input'
