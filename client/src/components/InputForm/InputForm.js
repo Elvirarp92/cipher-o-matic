@@ -30,6 +30,8 @@ class InputForm extends Component {
             .then((result) => this.props.renderCypherText(result.data))
             .catch((err) => console.log(err))
           break
+        default:
+          break
       }
     })
   }

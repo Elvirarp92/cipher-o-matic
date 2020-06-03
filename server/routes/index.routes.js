@@ -9,7 +9,7 @@ router.post('/caesar', (req, res, next) => {
 
   if (/^[a-zA-Z\s]*$/.test(text) === false) {
     res.json({
-      error: 'Your text contains forbidden characters! Please use only letters from A to Z',
+      error: 'Your text contains forbidden characters! Please use only letters from A to Z.',
     })
   } else {
     res.json({ message: caesar(text, factor) })

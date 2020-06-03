@@ -1,4 +1,17 @@
+main {
+  margin: 24px;
+}
+
 .alert {
-  width: 500px;
+  max-width: 450px;
   margin: 4px auto;
+}
+
+p {
+  margin: 24px auto;
+}
+
+.output {
+  text-align: left;
+  word-wrap: break-word;
 }
