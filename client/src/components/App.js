@@ -5,7 +5,14 @@ import InputForm from './InputForm/InputForm'
 class App extends Component {
   constructor() {
     super()
-    this.state = {}
+    this.state = {
+      message: "",
+      error: "",
+    }
+  }
+
+  renderCypherText = (message) => {
+    console.log(message)
   }
 
   render() {
@@ -13,7 +20,8 @@ class App extends Component {
       <main>
         <h1>Cipher-O-Matic</h1>
         <p>Encrypt and decrypt text with classic algorithms!</p>
-        <InputForm />
+        <InputForm renderCypherText={this.renderCypherText} />
+        <p className="output">{this.state.message}</p>
       </main>
     )
   }
