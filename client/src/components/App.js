@@ -15,7 +15,7 @@ class App extends Component {
     }
   }
 
-  renderCypherText = (output) => {
+  renderCipherText = (output) => {
     const stateCopy = { ...this.State }
     stateCopy.message = output.message
     stateCopy.error = output.error
@@ -33,7 +33,7 @@ class App extends Component {
             {this.state.error}
           </Alert>
         )}
-        <InputForm renderCypherText={this.renderCypherText} />
+        <InputForm renderCipherText={this.renderCipherText} />
         <p className='output'>{this.state.message}</p>
       </main>
     )

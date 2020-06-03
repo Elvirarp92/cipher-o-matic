@@ -27,7 +27,7 @@ class InputForm extends Component {
         case 'caesar':
           this.cipherService
             .caesar(this.state)
-            .then((result) => this.props.renderCypherText(result.data))
+            .then((result) => this.props.renderCipherText(result.data))
             .catch((err) => console.log(err))
           break
         default:
