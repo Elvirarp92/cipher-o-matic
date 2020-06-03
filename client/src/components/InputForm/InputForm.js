@@ -5,23 +5,36 @@ import Form from 'react-bootstrap/Form'
 import './InputForm.css'
 
 class InputForm extends Component {
-  constructor() {
-    super()
-    this.state = {}
+  constructor(props) {
+    super(props)
+    this.state = {
+
+      text: "",
+      cipher: "caesar",
+      factor: 13
+
+    }
+  }
+
+  handleChange = (e) => {
+    
+    const {value, name} = e.target
+    name === "factor" ? this.setState({[name]: parseInt(value)}) : this.setState({[name]: value})
+
   }
 
   render() {
     return (
       <Form.Group as='section'>
-        <Form.Control as='textarea' name='text' />
+        <Form.Control as='textarea' name='text' onChange={this.handleChange} />
         <Form.Text className='text-muted'>
           Please only input Latin characters without diacritics or spaces.
         </Form.Text>
         <div className='options-container'>
-          <Form.Control as='select' name='cipher'>
+          <Form.Control as='select' name='cipher' onChange={this.handleChange}>
             <option value='caesar'>Caesar cipher</option>
           </Form.Control>
-          <Form.Control as='input' type='number' name='factor' />
+          <Form.Control as='input' type='number' name='factor' value={13} onChange={this.handleChange} />
         </div>
       </Form.Group>
     )
