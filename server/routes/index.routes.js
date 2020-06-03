@@ -5,7 +5,6 @@ const { caesar } = require('./../configs/functions.config')
 router.post('/caesar', (req, res, next) => {
   const text = req.body.text
   const factor = req.body.factor
-  console.log(`${text} - ${factor}`)
 
   if (/^[a-zA-Z,.!?\s]*$/.test(text) === false) {
     res.json({
