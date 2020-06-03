@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import CipherService from './../../services/ciphers.service'
 
 import Form from 'react-bootstrap/Form'
 
@@ -8,19 +9,29 @@ class InputForm extends Component {
   constructor(props) {
     super(props)
     this.state = {
-
-      text: "",
-      cipher: "caesar",
-      factor: 13
-
+      text: '',
+      cipher: 'caesar',
+      factor: 0,
     }
+
+    this.cipherService = new CipherService()
   }
 
   handleChange = (e) => {
-    
-    const {value, name} = e.target
-    name === "factor" ? this.setState({[name]: parseInt(value)}) : this.setState({[name]: value})
-
+    let { value, name } = e.target
+    if (name === 'factor') {
+      value = parseInt(value)
+    }
+    this.setState({ [name]: value }, () => {
+      switch (this.state.cipher) {
+        case 'caesar':
+          this.cipherService
+            .caesar(this.state)
+            .then((result) => console.log(result.data.message))
+            .catch((err) => console.log(err))
+          break
+      }
+    })
   }
 
   render() {
@@ -34,7 +45,13 @@ class InputForm extends Component {
           <Form.Control as='select' name='cipher' onChange={this.handleChange}>
             <option value='caesar'>Caesar cipher</option>
           </Form.Control>
-          <Form.Control as='input' type='number' name='factor' value={13} onChange={this.handleChange} />
+          <Form.Control
+            as='input'
+            type='number'
+            name='factor'
+            value={this.state.value}
+            onChange={this.handleChange}
+          />
         </div>
       </Form.Group>
     )
