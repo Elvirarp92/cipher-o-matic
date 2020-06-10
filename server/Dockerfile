@@ -1,5 +1,5 @@
-FROM node:12
-WORKDIR /app
+FROM node:12-alpine
+WORKDIR /app-server
 COPY package.json  ./
 COPY package-lock.json  ./
 RUN npm install
