@@ -1,2 +1,8 @@
-node_modules
-npm-debug.log
+*
+!./bin
+!./configs
+!./public
+!./routes
+!./app.js
+!./package.json
+!./package-lock.json
