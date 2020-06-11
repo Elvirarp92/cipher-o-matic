@@ -16,4 +16,4 @@ COPY nginx/nginx.conf /etc/nginx/conf.d
 EXPOSE 80
 
 #  Step 3 - Start nginx server
-CMD ["/bin/bash", "-c", "nginx -g \"daemon off;\""]
+CMD ["/bin/sh", "-c", "nginx -g \"daemon off;\""]
