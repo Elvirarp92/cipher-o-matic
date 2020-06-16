@@ -14,6 +14,7 @@ Cipher-O-Matic is a single page, MERN based, web application to encrypt text usi
 ## 🧭 Roadmap
 
 - ~~Modifying the Caesar function so it also can decrypt ciphertext.~~ Done!
+- Refactoring functions to use positions on a given **alphabet** string or array instead of manipulating ASCII character codes
 - Including endpoints to encrypt/decrypt in other ciphers:
   - Atbash
   - Vigenère
