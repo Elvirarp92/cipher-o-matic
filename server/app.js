@@ -14,6 +14,6 @@ require('./configs/views.configs')(app)
 require('./configs/locals.config')(app)
 
 // Base URLS
-app.use('/api', require('./routes/index.routes'))
+app.use('/api/caesar', require('./routes/caesar.routes'))
 
 module.exports = app

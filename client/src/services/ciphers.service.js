@@ -8,5 +8,5 @@ export default class services {
     })
   }
 
-  caesar = ({text, factor, direction}) => this.service.post('/caesar', {text, factor, direction})
+  caesar = ({text, factor, direction}) => this.service.post(`/caesar/${direction}`, {text, factor})
 }

@@ -6,9 +6,10 @@ Cipher-O-Matic is a single page, MERN based, web application to encrypt text usi
 
 ## 🔌 API endpoints
 
-| **Method** | **Route** | **Description**                                                                                       |
-| ---------- | --------- | ----------------------------------------------------------------------------------------------------- |
-| POST       | /caesar   | Encrypts or decrypts text (argument **direction**) with the Caesar cipher, shifting letters **factor** positions in the alphabet. |
+| **Method** | **Route**          | **Description**                                                                                   |
+|------------|--------------------|---------------------------------------------------------------------------------------------------|
+| POST       | /caesar/encryption | Encrypts plaintext with the Caesar cipher, shifting letters **factor** positions in the alphabet. |
+| POST       | /caesar/decryption | Decrypts ciphertext with the Caesar cipher, providing a shift factor.                             |
 
 ## 🧭 Roadmap
 
